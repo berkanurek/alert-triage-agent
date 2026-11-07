@@ -1,0 +1,142 @@
+{
+  "j.novak": {
+    "type": "employee",
+    "department": "Clearing Operations",
+    "role": "Analyst",
+    "status": "active",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true
+  },
+  "m.svobodova": {
+    "type": "employee",
+    "department": "Client Services",
+    "role": "Officer",
+    "status": "active",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true
+  },
+  "p.dvorak": {
+    "type": "employee",
+    "department": "Finance",
+    "role": "Accountant",
+    "status": "active",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true
+  },
+  "k.horak": {
+    "type": "employee",
+    "department": "IT Development",
+    "role": "Software Engineer",
+    "status": "active",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true,
+    "note": "Used the company-approved VPN 14 times in the last 30 days."
+  },
+  "t.cerny": {
+    "type": "employee",
+    "department": "Client Reporting",
+    "role": "Senior Analyst",
+    "status": "leaving",
+    "last_working_day": "2026-11-06",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true,
+    "note": "Resigned on 2026-10-27. Moving to a competitor according to HR."
+  },
+  "a.kral": {
+    "type": "employee",
+    "department": "Security Engineering",
+    "role": "Security Engineer",
+    "status": "active",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true
+  },
+  "svc-reporting": {
+    "type": "service_account",
+    "department": "Data Platform",
+    "owner": "Data Platform team",
+    "status": "active",
+    "note": "Used only by the internal reporting job. Normally accessed only from internal IP ranges 10.0.0.0/8. Access keys are rotated by an automated job on the 1st of each month."
+  },
+  "l.marek": {
+    "type": "employee",
+    "department": "Treasury",
+    "role": "Treasury Analyst",
+    "status": "active",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true
+  },
+  "svc-backup": {
+    "type": "service_account",
+    "department": "IT Infrastructure",
+    "owner": "Backup team",
+    "status": "active",
+    "note": "Used by the nightly backup job on BKP-SRV-02."
+  },
+  "r.vesely": {
+    "type": "employee",
+    "department": "IT Infrastructure",
+    "role": "Domain Administrator",
+    "status": "active",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true,
+    "note": "Privileged account. On-call for infrastructure incidents."
+  },
+  "h.nemcova": {
+    "type": "employee",
+    "department": "Market Data",
+    "role": "Data Analyst",
+    "status": "active",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true
+  },
+  "e.blazkova": {
+    "type": "employee",
+    "department": "Human Resources",
+    "role": "HR Specialist",
+    "status": "active",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true,
+    "note": "USB storage use is not approved for this user."
+  },
+  "o.pokorny": {
+    "type": "employee",
+    "department": "Client Services",
+    "role": "Officer",
+    "status": "active",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true
+  },
+  "j.kucera": {
+    "type": "employee",
+    "department": "Clearing Operations",
+    "role": "Analyst",
+    "status": "active",
+    "usual_locations": [
+      "Prague"
+    ],
+    "mfa_enrolled": true,
+    "note": "No travel registered. Does not use a VPN."
+  }
+}

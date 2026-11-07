@@ -1,0 +1,62 @@
+[
+  {
+    "id": "CHG-1021",
+    "status": "approved",
+    "related": [
+      "VULN-SCAN-01",
+      "10.20.0.15"
+    ],
+    "summary": "Weekly full-range vulnerability scan of internal networks.",
+    "window": "Every Sunday 23:00 to Monday 04:00 UTC"
+  },
+  {
+    "id": "CHG-1044",
+    "status": "approved",
+    "related": [
+      "SEC-LT-0007",
+      "a.kral"
+    ],
+    "summary": "Antivirus detection test with the EICAR test file.",
+    "window": "2026-11-02 10:00 to 12:00 UTC"
+  },
+  {
+    "id": "CHG-1050",
+    "status": "approved",
+    "related": [
+      "svc-reporting"
+    ],
+    "summary": "Monthly automated rotation of access keys for svc-reporting.",
+    "window": "2026-11-01 01:00 to 01:30 UTC"
+  },
+  {
+    "id": "CHG-1055",
+    "status": "approved",
+    "related": [
+      "BKP-SRV-02",
+      "svc-backup",
+      "10.30.1.12"
+    ],
+    "summary": "Nightly full backup of all file servers.",
+    "window": "Every day 01:00 to 05:00 UTC"
+  },
+  {
+    "id": "CHG-1063",
+    "status": "approved",
+    "related": [
+      "r.vesely",
+      "JMP-01",
+      "10.5.0.4"
+    ],
+    "summary": "Emergency security patching and restart of production servers.",
+    "window": "2026-11-04 02:00 to 05:00 UTC"
+  },
+  {
+    "id": "CHG-1070",
+    "status": "approved",
+    "related": [
+      "secure-awareness-training.com"
+    ],
+    "summary": "Company-wide phishing simulation campaign run by the security awareness team.",
+    "window": "2026-11-03 08:00 to 17:00 UTC"
+  }
+]

@@ -1,0 +1,6 @@
+.env
+.venv/
+__pycache__/
+results*.jsonl
+results/eval_raw.jsonl
+data/playbook_index.json

@@ -1,0 +1,77 @@
+{
+  "PRG-LT-0388": {
+    "type": "laptop",
+    "owner": "m.svobodova",
+    "criticality": "medium",
+    "note": "Standard employee laptop."
+  },
+  "PRG-LT-0421": {
+    "type": "laptop",
+    "owner": "p.dvorak",
+    "criticality": "high",
+    "note": "Finance laptop with access to payment systems."
+  },
+  "PRG-LT-0102": {
+    "type": "laptop",
+    "owner": "t.cerny",
+    "criticality": "high",
+    "note": "Has access to the client reports share, which contains confidential client data."
+  },
+  "SEC-LT-0007": {
+    "type": "laptop",
+    "owner": "a.kral",
+    "criticality": "medium",
+    "note": "Security Engineering test laptop."
+  },
+  "VULN-SCAN-01": {
+    "type": "server",
+    "owner": "Security Engineering",
+    "criticality": "medium",
+    "ip": "10.20.0.15",
+    "note": "Approved internal vulnerability scanner."
+  },
+  "BKP-SRV-02": {
+    "type": "server",
+    "owner": "IT Infrastructure",
+    "criticality": "high",
+    "ip": "10.30.1.12",
+    "note": "Backup server. Reads all file servers every night."
+  },
+  "FILE-SRV-01": {
+    "type": "server",
+    "owner": "IT Infrastructure",
+    "criticality": "high",
+    "note": "Main file server."
+  },
+  "JMP-01": {
+    "type": "server",
+    "owner": "IT Infrastructure",
+    "criticality": "critical",
+    "ip": "10.5.0.4",
+    "note": "Jump host for administrative access to production servers."
+  },
+  "PRG-LT-0517": {
+    "type": "laptop",
+    "owner": "h.nemcova",
+    "criticality": "medium",
+    "note": "Standard employee laptop."
+  },
+  "PRG-LT-0611": {
+    "type": "laptop",
+    "owner": "e.blazkova",
+    "criticality": "high",
+    "note": "HR laptop with access to payroll and personal data of employees."
+  },
+  "PRG-LT-0233": {
+    "type": "laptop",
+    "owner": "o.pokorny",
+    "criticality": "medium",
+    "note": "Standard employee laptop."
+  },
+  "PRG-LT-0390": {
+    "type": "laptop",
+    "owner": "j.novak",
+    "criticality": "high",
+    "note": "Clearing operations laptop with access to settlement systems."
+  }
+}

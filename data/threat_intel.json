@@ -1,0 +1,131 @@
+{
+  "185.220.101.4": {
+    "type": "ip",
+    "verdict": "suspicious",
+    "tags": [
+      "tor-exit-node"
+    ],
+    "note": "Known Tor exit node. Often used to hide the origin of password-guessing attacks."
+  },
+  "203.0.113.66": {
+    "type": "ip",
+    "verdict": "malicious",
+    "tags": [
+      "malware-distribution"
+    ],
+    "note": "Hosted payloads of a known banking trojan in the last 7 days."
+  },
+  "45.88.97.12": {
+    "type": "ip",
+    "verdict": "benign",
+    "tags": [
+      "commercial-vpn",
+      "company-approved-vpn"
+    ],
+    "note": "Exit node of the commercial VPN provider that is approved in the company VPN policy."
+  },
+  "91.243.44.20": {
+    "type": "ip",
+    "verdict": "unknown",
+    "tags": [
+      "cloud-hosting",
+      "first-seen"
+    ],
+    "note": "Rented virtual server at a hosting provider. Never seen in company logs before."
+  },
+  "10.20.0.15": {
+    "type": "ip",
+    "verdict": "internal",
+    "tags": [
+      "internal"
+    ],
+    "note": "Internal address."
+  },
+  "micros0ft-support.com": {
+    "type": "domain",
+    "verdict": "malicious",
+    "tags": [
+      "phishing",
+      "typosquatting",
+      "newly-registered"
+    ],
+    "note": "Registered 2 days ago. Imitates microsoft.com (zero instead of letter o). Hosts a fake Microsoft 365 login page."
+  },
+  "103.75.190.11": {
+    "type": "ip",
+    "verdict": "suspicious",
+    "tags": [
+      "residential-proxy"
+    ],
+    "note": "Residential proxy network often used to bypass location-based login rules."
+  },
+  "update-cdn-sync.net": {
+    "type": "domain",
+    "verdict": "malicious",
+    "tags": [
+      "command-and-control",
+      "malware"
+    ],
+    "note": "Command-and-control domain of a remote access trojan. Infected hosts contact it at fixed intervals (beaconing)."
+  },
+  "paypa1-secure-billing.com": {
+    "type": "domain",
+    "verdict": "malicious",
+    "tags": [
+      "phishing",
+      "typosquatting",
+      "newly-registered"
+    ],
+    "note": "Registered 3 days ago. Imitates PayPal (digit 1 instead of letter l). Hosts a credential-harvesting page."
+  },
+  "secure-awareness-training.com": {
+    "type": "domain",
+    "verdict": "benign",
+    "tags": [
+      "phishing-simulation",
+      "company-approved-vendor"
+    ],
+    "note": "Phishing-simulation vendor used by the company's security awareness program."
+  },
+  "102.89.32.7": {
+    "type": "ip",
+    "verdict": "unknown",
+    "tags": [
+      "residential-isp",
+      "first-seen"
+    ],
+    "note": "Residential internet provider in Nigeria. Never seen in company logs before."
+  },
+  "10.20.0.88": {
+    "type": "ip",
+    "verdict": "internal",
+    "tags": [
+      "internal"
+    ],
+    "note": "Internal address. Not registered in the asset inventory."
+  },
+  "10.12.4.20": {
+    "type": "ip",
+    "verdict": "internal",
+    "tags": [
+      "internal"
+    ],
+    "note": "Internal address of the reporting job server."
+  },
+  "10.30.1.12": {
+    "type": "ip",
+    "verdict": "internal",
+    "tags": [
+      "internal"
+    ],
+    "note": "Internal address of BKP-SRV-02."
+  },
+  "10.5.0.4": {
+    "type": "ip",
+    "verdict": "internal",
+    "tags": [
+      "internal"
+    ],
+    "note": "Internal address of JMP-01."
+  }
+}
