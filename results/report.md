@@ -47,5 +47,5 @@
 ## How to read this
 
 - **Missed attacks** is the most important row: an attack closed as a false alarm is never looked at by a human.
-- 20 hand-written alerts are a small test set. The numbers show the effect of each design choice, not production accuracy.
+- 20 synthetic alerts (created with the help of an AI assistant) are a small test set. The numbers show the effect of each design choice, not production accuracy.
 - LLM output is not fully deterministic, so results change slightly between runs. Use `--runs 3` to measure that.
