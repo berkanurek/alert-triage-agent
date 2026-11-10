@@ -10,29 +10,15 @@ alarms with evidence, and make sure real attacks are never silently dropped.
 
 ## Architecture
 
-```mermaid
-flowchart TD
-    A[Security alert] --> G{Injection guardrail<br/>regex, plain code}
-    A --> I[Investigator agent]
-    I <-->|read-only tool calls| T[(Threat intel<br/>HR / identity<br/>Asset inventory<br/>Change tickets)]
-    I -->|evidence summary| R[RAG: playbook retrieval]
-    R -->|top-3 playbook sections| TR[Triage agent<br/>structured JSON decision]
-    TR --> C[Critic agent<br/>second opinion]
-    C --> F[Fail-safe rules in code]
-    G --> F
-    F --> H{High / critical<br/>or disputed?}
-    H -->|yes| HU[Human analyst]
-    H -->|no| AC[Auto-close with evidence]
-    F --> L[(Audit log)]
-```
+![Architecture: how one alert moves through the system](docs/architecture.png)
 
 | Step | File | What it does |
 | --- | --- | --- |
-| Investigator agent | `investigator.py` | Agent loop (think → call tool → observe). Decides by itself which tools to call. Max 6 steps. |
+| Agent 1 · Investigator | `investigator.py` | Agent loop (think → call tool → observe). Decides by itself which tools to call. Max 6 steps. |
 | Tools | `tools.py` | 4 read-only tools: threat intel, user/HR info, asset inventory, change tickets. Allow-list in `run_tool`. |
 | RAG | `rag.py` | Splits 7 playbooks into 21 sections, embeds them (`gemini-embedding-001`), retrieves the top 3 by cosine similarity. Index cached in `data/playbook_index.json`. |
-| Triage agent | `triage.py` | Returns a Pydantic-validated decision: severity, MITRE tactic, true/false positive, reasoning, action, playbook reference. Run alone = **baseline**. |
-| Critic agent | `critic.py` | Skeptical senior-analyst review of the decision. Disagreements are resolved by code, not by the model. |
+| Agent 2 · Decision maker | `triage.py` | Returns a Pydantic-validated decision: severity, MITRE tactic, true/false positive, reasoning, action, playbook reference. Run alone = **baseline**. |
+| Agent 3 · Checker | `critic.py` | Skeptical senior-analyst review of the decision. Disagreements are resolved by code, not by the model. |
 | Guardrail | `guardrails.py` | Detects prompt-injection phrases in alert fields. A flagged alert can never be auto-closed. |
 | Pipeline | `pipeline.py` | Connects everything and writes the audit log. |
 | Evaluation | `evaluate.py` | Compares the single agent with the multi-agent system on all test alerts. |
@@ -57,7 +43,7 @@ flowchart TD
 
 ## Test data
 
-20 hand-written alerts (`alerts.json`) with correct answers, plus small JSON files that simulate
+20 synthetic alerts (`alerts.json`), created with the help of an AI assistant, each with a correct answer, plus small JSON files that simulate
 company systems (`data/`). They include:
 
 - clear attacks (phishing click, malware execution, cloud key misuse, C2 beaconing)
@@ -131,5 +117,5 @@ Uses the Gemini API (free tier works; set `GEMINI_MODEL` in `.env` to change the
 
 ## How this was built
 
-Built as a learning project while preparing for a security engineering role, with help from an AI coding
-assistant. The architecture choices, test scenarios and evaluation were reviewed and run by me.
+Built as a learning project while preparing for a security engineering role. The code and the test data
+were written with the help of an AI coding assistant; I ran, debugged and evaluated the system on my own machine.
