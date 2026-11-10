@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1620" viewBox="0 0 1200 1620" xmlns:c2pa="http://c2pa.org/manifest">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker></defs>
+<rect width="1200" height="1620" fill="#FFFFFF"/>
+<text x="60" y="62" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#0F172A">Multi-agent security alert triage</text>
+<text x="60" y="94" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#475569">How one alert moves through the system. Agents only read and recommend; code enforces the safety rules; humans decide risky cases.</text>
+<rect x="280" y="130" width="480" height="84" rx="14" fill="#FEF2F2" stroke="#DC2626" stroke-width="2"/>
+<text x="302" y="168" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#7F1D1D">Security alert</text>
+<text x="302" y="196" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">From the SIEM: login, email, endpoint or cloud event</text>
+<path d="M520,214 L520,250" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="280" y="250" width="480" height="98" rx="14" fill="#F1F5F9" stroke="#475569" stroke-width="2"/>
+<circle cx="310" cy="282" r="15" fill="#475569"/>
+<text x="310" y="288" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">1</text>
+<text x="336" y="288" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#0F172A">Injection guardrail</text>
+<text x="742" y="287" text-anchor="end" font-family="Consolas, Menlo, monospace" font-size="13" fill="#475569">guardrails.py</text>
+<text x="336" y="316" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Plain-code regex scan for hidden instructions</text>
+<text x="336" y="338" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">like “ignore previous instructions”</text>
+<path d="M520,348 L520,392" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="280" y="392" width="480" height="120" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/>
+<circle cx="310" cy="424" r="15" fill="#4F46E5"/>
+<text x="310" y="430" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">2</text>
+<text x="336" y="430" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#312E81">Agent 1 · Investigator</text>
+<text x="742" y="429" text-anchor="end" font-family="Consolas, Menlo, monospace" font-size="13" fill="#4F46E5">investigator.py</text>
+<text x="336" y="458" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Decides by itself which tools to call</text>
+<text x="336" y="480" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Max 6 steps, then writes an evidence summary</text>
+<text x="336" y="502" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Tools can only read, never change anything</text>
+<path d="M850,396 a150.0,12 0 0,1 300,0 v116 a150.0,12 0 0,1 -300,0 z" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+<path d="M850,396 a150.0,12 0 0,0 300,0" fill="none" stroke="#059669" stroke-width="2"/>
+<text x="1000.0" y="430" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#064E3B">Read-only tools</text>
+<text x="1000.0" y="456" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Threat intel · HR / identity</text>
+<text x="1000.0" y="478" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Asset inventory · Change tickets</text>
+<path d="M760,436 L848,436" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<text x="772" y="426" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" font-style="italic" fill="#475569">tool call</text>
+<path d="M850,474 L762,474" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<text x="772" y="496" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" font-style="italic" fill="#475569">result</text>
+<path d="M520,512 L520,572" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<text x="532" y="548" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" font-style="italic" fill="#475569">evidence summary</text>
+<rect x="280" y="572" width="480" height="98" rx="14" fill="#F1F5F9" stroke="#475569" stroke-width="2"/>
+<circle cx="310" cy="604" r="15" fill="#475569"/>
+<text x="310" y="610" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">3</text>
+<text x="336" y="610" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#0F172A">RAG · Playbook search</text>
+<text x="742" y="609" text-anchor="end" font-family="Consolas, Menlo, monospace" font-size="13" fill="#475569">rag.py</text>
+<text x="336" y="638" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Finds the 3 most relevant of 21 playbook sections</text>
+<text x="336" y="660" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Gemini embeddings + cosine similarity</text>
+<path d="M850,584 a150.0,12 0 0,1 300,0 v80 a150.0,12 0 0,1 -300,0 z" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+<path d="M850,584 a150.0,12 0 0,0 300,0" fill="none" stroke="#059669" stroke-width="2"/>
+<text x="1000.0" y="618" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#064E3B">7 security playbooks</text>
+<text x="1000.0" y="644" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Phishing, malware, data theft…</text>
+<path d="M850,622 L762,622" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M520,670 L520,730" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<text x="532" y="706" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" font-style="italic" fill="#475569">alert + evidence + 3 playbook sections</text>
+<rect x="280" y="730" width="480" height="120" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/>
+<circle cx="310" cy="762" r="15" fill="#4F46E5"/>
+<text x="310" y="768" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">4</text>
+<text x="336" y="768" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#312E81">Agent 2 · Decision maker</text>
+<text x="742" y="767" text-anchor="end" font-family="Consolas, Menlo, monospace" font-size="13" fill="#4F46E5">triage.py</text>
+<text x="336" y="796" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Real attack or false alarm? How serious?</text>
+<text x="336" y="818" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Recommends an action from the playbook</text>
+<text x="336" y="840" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Answer must match a strict JSON format</text>
+<path d="M520,850 L520,904" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<text x="532" y="882" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" font-style="italic" fill="#475569">decision</text>
+<rect x="280" y="904" width="480" height="98" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/>
+<circle cx="310" cy="936" r="15" fill="#4F46E5"/>
+<text x="310" y="942" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">5</text>
+<text x="336" y="942" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#312E81">Agent 3 · Checker</text>
+<text x="742" y="941" text-anchor="end" font-family="Consolas, Menlo, monospace" font-size="13" fill="#4F46E5">critic.py</text>
+<text x="336" y="970" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Second opinion: is the decision</text>
+<text x="336" y="992" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">supported by the evidence?</text>
+<path d="M520,1002 L520,1056" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<text x="532" y="1034" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" font-style="italic" fill="#475569">agree / disagree</text>
+<rect x="280" y="1056" width="480" height="120" rx="14" fill="#F1F5F9" stroke="#475569" stroke-width="2"/>
+<circle cx="310" cy="1088" r="15" fill="#475569"/>
+<text x="310" y="1094" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">6</text>
+<text x="336" y="1094" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#0F172A">Fail-safe rules</text>
+<text x="742" y="1093" text-anchor="end" font-family="Consolas, Menlo, monospace" font-size="13" fill="#475569">pipeline.py</text>
+<text x="336" y="1122" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">If agents disagree: keep the more serious view</text>
+<text x="336" y="1144" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">If an injection was flagged: never auto-close</text>
+<text x="336" y="1166" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">High or critical: always a human</text>
+<path d="M850,1076 a150.0,12 0 0,1 300,0 v80 a150.0,12 0 0,1 -300,0 z" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+<path d="M850,1076 a150.0,12 0 0,0 300,0" fill="none" stroke="#059669" stroke-width="2"/>
+<text x="1000.0" y="1110" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#064E3B">Audit log</text>
+<text x="1000.0" y="1136" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Every tool call, decision</text>
+<text x="1000.0" y="1158" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">and review is saved</text>
+<path d="M760,1116 L848,1116" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<text x="772" y="1106" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" font-style="italic" fill="#475569">saved</text>
+<path d="M280,299 L200,299 L200,1116 L278,1116" fill="none" stroke="#DC2626" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#ahr)"/>
+<text x="186" y="707" transform="rotate(-90 186 707)" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-style="italic" fill="#DC2626">injection flag goes straight to the safety rules</text>
+<path d="M520,1192 L730,1266 L520,1340 L310,1266 z" fill="#F8FAFC" stroke="#475569" stroke-width="2"/>
+<text x="520" y="1254" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Needs a human?</text>
+<text x="520" y="1278" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#475569">high or critical, injection flag,</text>
+<text x="520" y="1297" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#475569">or the agents disagree</text>
+<path d="M520,1176 L520,1192" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M310,1266 L290,1266 L290,1404" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<text x="278" y="1300" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" font-style="italic" fill="#475569">yes</text>
+<path d="M730,1266 L750,1266 L750,1404" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+<text x="762" y="1300" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" font-style="italic" fill="#475569">no</text>
+<rect x="140" y="1404" width="300" height="92" rx="14" fill="#FFF7ED" stroke="#EA580C" stroke-width="2"/>
+<text x="162" y="1442" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#7C2D12">Human analyst decides</text>
+<text x="162" y="1470" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Sees evidence, decision and review</text>
+<rect x="600" y="1404" width="300" height="92" rx="14" fill="#F0FDF4" stroke="#16A34A" stroke-width="2"/>
+<text x="622" y="1442" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#14532D">Low risk: recommend closing</text>
+<text x="622" y="1470" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">False alarm, evidence logged</text>
+<rect x="60" y="1540" width="22" height="22" rx="5" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/>
+<text x="92" y="1556" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">AI agent (LLM)</text>
+<rect x="240.79999999999998" y="1540" width="22" height="22" rx="5" fill="#F1F5F9" stroke="#475569" stroke-width="2"/>
+<text x="272.79999999999995" y="1556" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Plain code</text>
+<rect x="388.79999999999995" y="1540" width="22" height="22" rx="5" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+<text x="420.79999999999995" y="1556" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Data / storage</text>
+<rect x="569.5999999999999" y="1540" width="22" height="22" rx="5" fill="#FFF7ED" stroke="#EA580C" stroke-width="2"/>
+<text x="601.5999999999999" y="1556" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Human</text>
+<rect x="676.5999999999999" y="1540" width="22" height="22" rx="5" fill="#FEF2F2" stroke="#DC2626" stroke-width="2"/>
+<text x="708.5999999999999" y="1556" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#334155">Input</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpmMjQxZTdkNy1mMjdhLTRkOTctYTA3ZS0xYWM0MTdlMWE3NzkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaI63vbPuvRTSUtJNIec91H8AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpiMWNlYTA1Yy1kODM5LTRmMTgtYTFhYi1hMWVkZGM2YmUwNjBscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoLxuqoQy7tI2iKSDynep2ewAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggwodteOJhaSl0BNTY/zOa9SsPPiycsmRn3MU0sMOsXbakZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaOXWHOJ7/3+mR0io9wjB9YAAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIAu446qpxNKCjocjWYwVaQ2M+PTAP9WIQO6TKnefETDtZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GTgfZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmYyNDFlN2Q3LWYyN2EtNGQ5Ny1hMDdlLTFhYzQxN2UxYTc3OS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjJjZTYwMmJkLTVkZDUtNDRkYi1iYmNhLTk1NmZmZTUxZjRmZXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDCh2144mFpKXQE1Nj/M5r1Kw8+LJyyZGfcxTSww6xdtqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg5ULyEvPUZnHyq+VSBjIr7DlL5aO8BsPt9/WzKVXul8eiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg/PQ0cdWcyrKEO1UJ+7gXVGVSMPQE6goXa+qXUm2y8wp0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQM6ycW/mhDSAc6bCrBK20Vy/wXjUtBTX5WbA1CNlAYnIPuZ7jgYqvCCsDiTXGxGyeY3rjQLpBjS643KMZok3jYg=</c2pa:manifest></metadata></svg>
